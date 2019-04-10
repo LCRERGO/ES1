@@ -4,11 +4,13 @@ Documento de Requisitos - Sistema de Gestão de Locação de Quartos em hotel
 .AU
 Lucas Cruz dos Reis
 .AU
-Roseval Malaquias
+Luís Felipe Corrêa Ortolan
 .AU
-Luis Felipe Ortolan
+Roseval Donisete Malaquias Junior
 .AU
-Yuri
+Vitor Donadelli Rodrigues
+.AU
+Yuri Gabriel Aragão da Silva
 .NH
 Introdução
 .NH
@@ -17,3 +19,13 @@ Descrição Geral
 Requisitos Específicos
 .SH
 Brainstorm
+.PP
+Nos reunimos na biblioteca afim de abordar os Requisitos funcionais, não funcionais, do sistema de reserva de quartos de um hotel, criar uma reserva, 
+gerar senha para o sistema, alterar uma reserva, cancelar uma reserva, discutiu-se também efetivar a reserva/pagar e se deve separá-las,
+decidiu-se que sim; criar cadastro(funcionário, administrador, hóspede), alterar cadastro(funcionário, administrador, hóspede), excluir cadastro(funcionário,
+administrador, hóspede), realizar um backup a cada 24h, capaz de rodar em Windows 7 SP1 ou superior, Linux, MacOS; realizar pagamento, criar uma interface diferente 
+para hóspede do hotel web em html/css/js, criar uma interface diferente para gestor do hotel web em html/css/js, função de reembolso de parte do pagamento, 
+os pagamentos devem ser efetivados pelo sistema em até 10 sec, interface de aplicativo para OSX e Android, cadastrar o cartão do quarto, descadastrar o 
+cartão do quarto; solicitar serviço de quarto, listagem dos consumos até o momento, solicitar troca de roupa de cama/banho, agendar serviço de quarto, 
+cancelar serviço de quarto; acessar área de serviços adicionais (agendar, alterar, cancelar), solicitar fichas de cassinos, solicitar plano de internet, 
+alterar plano de internet, cancelar plano de internet, renovar o plano de internet, solicitar toalha para a piscina.
