@@ -13,6 +13,16 @@ Vitor Donadelli Rodrigues
 Yuri Gabriel Aragão da Silva
 .NH
 Introdução
+.NH 2
+Propósito do Documento de Requisitos
+.PP
+Este documento se propõe à esplanar acerca especificações necessárias para a construção de um sistema de reserva de quartos de um hotel.
+.NH 2
+Escopo do Produto
+.PP
+O sistema tem como objetivo intermediar a gestão de um sistema de quartos de hotel; para hóspedes, funcionários e administradores, visando principalmente as
+funcionalidades da reserva de quartos feitas pelo hóspede; a efetivação da reserva; os requisitos do sistema; a gestão de hospedagem e os serviços adicionais
+do hotel
 .NH
 Descrição Geral
 .NH
@@ -20,12 +30,15 @@ Requisitos Específicos
 .SH
 Brainstorm
 .PP
-Nos reunimos na biblioteca afim de abordar os Requisitos funcionais, não funcionais, do sistema de reserva de quartos de um hotel, criar uma reserva, 
-gerar senha para o sistema, alterar uma reserva, cancelar uma reserva, discutiu-se também efetivar a reserva/pagar e se deve separá-las,
-decidiu-se que sim; criar cadastro(funcionário, administrador, hóspede), alterar cadastro(funcionário, administrador, hóspede), excluir cadastro(funcionário,
-administrador, hóspede), realizar um backup a cada 24h, capaz de rodar em Windows 7 SP1 ou superior, Linux, MacOS; realizar pagamento, criar uma interface diferente 
-para hóspede do hotel web em html/css/js, criar uma interface diferente para gestor do hotel web em html/css/js, função de reembolso de parte do pagamento, 
-os pagamentos devem ser efetivados pelo sistema em até 10 sec, interface de aplicativo para OSX e Android, cadastrar o cartão do quarto, descadastrar o 
-cartão do quarto; solicitar serviço de quarto, listagem dos consumos até o momento, solicitar troca de roupa de cama/banho, agendar serviço de quarto, 
-cancelar serviço de quarto; acessar área de serviços adicionais (agendar, alterar, cancelar), solicitar fichas de cassinos, solicitar plano de internet, 
-alterar plano de internet, cancelar plano de internet, renovar o plano de internet, solicitar toalha para a piscina.
+Nos reunimos na biblioteca às 9:30 até 10:30 dia 10/04/2019, iniciamos a discusão entre os 5 membros, tivemos Lucas como o relator, e Luis como o administrador da reunião, enquanto os demais lançavam toda sorte de ideias a respeito do sistema; abordamos a funcionalidades ligadas à reserva de quartos feitas pelo cliente, 
+seguinte fizemos uma abordagem acerca efetivação de reservas e hospedagens, logo após os requisitos de sistema, discutimos a gestão de hospedagem e 
+serviços adicionais sistema de reserva de quartos de um hotel; entre os quais: criar uma reserva, gerar senha para o sistema, alterar uma 
+reserva, cancelar uma reserva, discutiu-se também efetivar a reserva/pagar e se deve separá-las, decidiu-se que sim; criar cadastro(funcionário, 
+administrador, hóspede), alterar cadastro(funcionário, administrador, hóspede), excluir cadastro(funcionário, administrador, hóspede), realizar um 
+backup a cada 24h, capaz de rodar em Windows 7 SP1 ou superior, Linux, MacOS; realizar pagamento, criar uma interface diferente para hóspede do hotel web 
+em html/css/js, criar uma interface diferente para gestor do hotel web em html/css/js, função de reembolso de parte do pagamento, os pagamentos devem 
+ser efetivados pelo sistema em até 10 sec, interface de aplicativo para OSX e Android, cadastrar o cartão do quarto, descadastrar o cartão do quarto; 
+solicitar serviço de quarto, listagem dos consumos até o momento, solicitar troca de roupa de cama/banho, agendar serviço de quarto, cancelar serviço de 
+quarto; acessar área de serviços adicionais (agendar, alterar, cancelar), solicitar fichas de cassinos, solicitar plano de internet, alterar plano de 
+internet, cancelar plano de internet, renovar o plano de internet, solicitar toalha para a piscina. Ao final chegamos perto de 40 requisitos para serem implementados
+no sistema
