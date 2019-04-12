@@ -1,2 +1,2 @@
-To compile, type:
+#To compile, type:
 groff docReq.groff -ms -T pdf -K utf-8 > docReq.pdf

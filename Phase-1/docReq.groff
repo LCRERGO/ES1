@@ -1,4 +1,4 @@
-.RP
+.RP no
 .TL
 Documento de Requisitos - Sistema de Gestão de Locação de Quartos em hotel
 .AU
@@ -23,6 +23,10 @@ Escopo do Produto
 O sistema tem como objetivo intermediar a gestão de um sistema de quartos de hotel; para hóspedes, funcionários e administradores, visando principalmente as
 funcionalidades da reserva de quartos feitas pelo hóspede; a efetivação da reserva; os requisitos do sistema; a gestão de hospedagem e os serviços adicionais
 do hotel
+.NH 2
+Visão Geral do Restante do Documento
+.PP
+Na seção 2 é a apresentada uma descrição geral do sistema. Os requisitos funcionais e não funcionais são apresentados na seção 3. Ao final é apresentado um sumário do brainstorm
 .NH
 Descrição Geral
 .NH
