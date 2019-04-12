@@ -35,7 +35,7 @@ seguinte fizemos uma abordagem acerca efetivação de reservas e hospedagens, lo
 serviços adicionais sistema de reserva de quartos de um hotel; entre os quais: criar uma reserva, gerar senha para o sistema, alterar uma 
 reserva, cancelar uma reserva, discutiu-se também efetivar a reserva/pagar e se deve separá-las, decidiu-se que sim; criar cadastro(funcionário, 
 administrador, hóspede), alterar cadastro(funcionário, administrador, hóspede), excluir cadastro(funcionário, administrador, hóspede), realizar um 
-backup a cada 24h, capaz de rodar em Windows 7 SP1 ou superior, Linux, MacOS; realizar pagamento, criar uma interface diferente para hóspede do hotel web 
+backup a cada 24h, capaz de rodar em Windows 8 SP1 ou superior, Linux, MacOS; realizar pagamento, criar uma interface diferente para hóspede do hotel web 
 em html/css/js, criar uma interface diferente para gestor do hotel web em html/css/js, função de reembolso de parte do pagamento, os pagamentos devem 
 ser efetivados pelo sistema em até 10 sec, interface de aplicativo para OSX e Android, cadastrar o cartão do quarto, descadastrar o cartão do quarto; 
 solicitar serviço de quarto, listagem dos consumos até o momento, solicitar troca de roupa de cama/banho, agendar serviço de quarto, cancelar serviço de 
