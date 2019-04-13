@@ -22,11 +22,11 @@ Escopo do Produto
 .PP
 O sistema tem como objetivo intermediar a gestão de um sistema de quartos de hotel; para hóspedes, funcionários e administradores, visando principalmente as
 funcionalidades da reserva de quartos feitas pelo hóspede; a efetivação da reserva; os requisitos do sistema; a gestão de hospedagem e os serviços adicionais
-do hotel
+do hotel.
 .NH 2
 Visão Geral do Restante do Documento
 .PP
-Na seção 2 é a apresentada uma descrição geral do sistema. Os requisitos funcionais e não funcionais são apresentados na seção 3. Ao final é apresentado um sumário do brainstorm
+Na seção 2 é a apresentada uma descrição geral do sistema. Os requisitos funcionais e não funcionais são apresentados na seção 3. Ao final é apresentado um sumário do brainstorm.
 .NH
 Descrição Geral
 .NH
@@ -45,4 +45,4 @@ ser efetivados pelo sistema em até 10 sec, interface de aplicativo para OSX e A
 solicitar serviço de quarto, listagem dos consumos até o momento, solicitar troca de roupa de cama/banho, agendar serviço de quarto, cancelar serviço de 
 quarto; acessar área de serviços adicionais (agendar, alterar, cancelar), solicitar fichas de cassinos, solicitar plano de internet, alterar plano de 
 internet, cancelar plano de internet, renovar o plano de internet, solicitar toalha para a piscina. Ao final chegamos perto de 40 requisitos para serem implementados
-no sistema
+no sistema.
