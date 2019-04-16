@@ -11,26 +11,85 @@ Roseval Donisete Malaquias Junior
 Vitor Donadelli Rodrigues
 .AU
 Yuri Gabriel Aragão da Silva
+.AI
+Universidade Federal de São Carlos(UFSCar)
 .NH
 Introdução
 .NH 2
 Propósito do Documento de Requisitos
 .PP
-Este documento se propõe à esplanar acerca especificações necessárias para a construção de um sistema de reserva de quartos de um hotel.
+A criação deste documento possui como finalidade o agrupamento de todos os requisitos necessários para a criação de um sistema de gestão de locação de quartos em hotel.
 .NH 2
 Escopo do Produto
 .PP
-O sistema tem como objetivo intermediar a gestão de um sistema de quartos de hotel; para hóspedes, funcionários e administradores, visando principalmente as
-funcionalidades da reserva de quartos feitas pelo hóspede; a efetivação da reserva; os requisitos do sistema; a gestão de hospedagem e os serviços adicionais
-do hotel.
+O sistema a ser desenvolvido pretende atender tanto os hóspedes, que devem ser capazes desde efetuar suas reservas até controlar as suas estadias no hotel de forma rápida e prática, quanto por funcionários do próprio estabelecimento, que podem gerenciar reservas feitas e serviços adicionais, buscando facilitar a interação com seus hóspedes.
+.PP
+O sistema possuirá duas interfaces separadas, sendo uma para os hóspedes e outra para os funcionários do hotel, com as ferramentas necessárias por cada grupo de usuário. Ambas  as interfaces possuem suporte tanto para Desktops quanto Smartphones, possuindo conexão direta com os servidores do Hotel, para que forneçam de forma precisa e em tempo real todos os dados necessários.
 .NH 2
 Visão Geral do Restante do Documento
 .PP
 Na seção 2 é a apresentada uma descrição geral do sistema. Os requisitos funcionais e não funcionais são apresentados na seção 3. Ao final é apresentado um sumário do brainstorm.
 .NH
 Descrição Geral
+.NH 2
+Perspectiva do Produto
+.PP
+O sistema deverá possuir todas as características necessárias para que o cliente consiga de forma simples efetuar sua reserva e solicitar quaisquer serviços oferecidos pelo hotel, buscando assim agilizar e facilitar este procedimento. Além disso, o sistema deve fornecer aos gerenciadores do hotel elementos para que estes possam saber as necessidades de seus hóspedes e assim oferecê-los um serviço de qualidade, atendendo suas necessidades de forma eficaz.
+.NH 2 
+Funções do Produto
+.PP
+Na visão do hóspede, temos duas funções principais do sistema: a de fazer uma reserva de um quarto de hotel, enviando a solicitação diretamente para os servidores do hotel através de uma plataforma conectada a internet e permitir que estes façam solicitações e realizem o gerenciamento dos serviços que são providos pelo hotel.
+.PP
+Na visão do funcionário, a função do sistema é gerenciar as reservas e solicitações de serviços realizadas pelos hóspedes, podendo efetivar, alterar e cancelar qualquer solicitação, futura ou atual.
+.NH 2
+Características do Usuário
+.PP
+Existem três tipos de usuários do sistema:
+.IP \(bu
+Os hóspedes que irão utilizar o sistema para realizar reservas de quartos no hotel e para solicitar serviços adicionais, estes sendo membros da comunidade, sem conhecimentos específicos em tecnologias de informação e autoatendimento.
+.IP \(bu
+Os funcionários do hotel, que irão utilizar do sistema para gerenciar as reservas e solicitações de serviços realizados pelos hóspedes...
+.IP \(bu
+Os administradores, os quais serão responsáveis pela gestão de funcionários e de serviços disponíveis no hotel. Estes também utilizarão do sistema para a checagem e verificação de possíveis problemas de funcionamento do sistema.
+.NH 2
+Restrições Gerais
+.PP
+O sistema deverá possuir uma interface adaptada para aparelhos móveis que utilizem os sistemas operacionais iOS e Android. Além disso, uma outra interface web adaptada para uso em computadores pessoais, que podem ter os sistemas operacionais Windows 8 SP1 ou superior, Linux ou MacOS, sem necessidade de processadores de alto nível.
+.NH 2
+Suposições e Dependências
+.PP
+O sistema depende crucialmente da rede de telecomunicações (Internet) e das operadoras dos cartões de crédito na hora de efetuar os pagamentos online. O sistema depende do bom funcionamento da base de dados do hotel para o funcionamento correto das gestões de serviços e locação de quartos.
 .NH
 Requisitos Específicos
+.NH
+Requisitos Funcionais
+.nr i 0 1
+.IP \n+i
+O sistema deve solicitar o cadastro completo do gerente/administrador do hotel onde foi feito a instalação do sistema, o cadastro especial deve conter obrigatoriamente CPF, nome completo, número do telefone fixo e celular, senha pessoal.
+.IP \n+i
+O sistema deve permitir funcionários e administrador realizarem o cadastro de hóspedes e outros funcionários. Tal cadastro deve conter, obrigatoriamente, para todas as instâncias, CPF, nome completo, endereço , cidade, estado, CEP, número do telefone fixo e celular e senha pessoal (alfanumérica, no mínimo 12 caracteres).
+.IP \n+i
+O sistema deve permitir o funcionário ou administrador alterar cadastro já existente de um hóspede, mediante o pedido e login do mesmo e excluir cadastros de hóspedes.
+.IP \n+i
+O sistema deve permitir o hóspede realizar reserva no hotel, mediante login. A reserva pode ser feita tanto no balcão de atendimento do hotel com auxílio de funcionário ou através do aplicativo de celular ou pelo computador.
+.IP \n+i
+O sistema deve permitir o hóspede realizar a alteração ou exclusão de uma reserva já existente.
+.IP \n+i
+O sistema deve permitir o hóspede realizar o pagamento de sua estadia no hotel,  através do aplicativo celular, desktop ou com auxílio do balcão de atendimento do hotel. O pagamento pode ser feito com dinheiro ou cartão de crédito (os permitidos serão MasterCard, Visa e AmericanExpress).
+.IP \n+i
+O sistema deve permitir o hóspede solicitar um reembolso do valor pago pela estadia antes de fazer o check-in no hotel. Se o check-in já tiver sido feito, este pode solicitar reembolso proporcional aos dias de reserva que abriu mão.
+.IP \n+i
+O sistema deve permitir que o hóspede solicite que seja feito o serviço de quarto, agendado em melhor horário para o hóspede. Além disso, deve ser possível alterar ou cancelar um serviço de quarto pré agendado.
+.IP \n+i
+O sistema deve permitir que o hóspede solicite um extrato que indica todos os consumos realizados até o momento, sejam estes comidas consumidas, serviços adicionais pagos oferecidos pelo hotel.
+.IP \n+i
+O sistema deve permitir que o hóspede realize a compra do serviço de internet oferecido pelo hotel para um determinado período. Também deve ser possível alterar o período da compra, assim como cancelar a compra.
+.IP \n+i
+O sistema deve permitir que o hóspede realize a compra de fichas do cassino do hotel, assim como pedir o reembolso por fichas não usadas.
+.IP \n+i
+O sistema deve permitir que o hóspede faça a requisição de toalhas extras para o seu quarto para que estas possam ser usadas na piscina. 
+.NH 2
+Requisitos Não-Funcionais
 .SH
 Brainstorm
 .PP
