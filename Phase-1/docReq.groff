@@ -1,18 +1,21 @@
+.nr null 
 .RP no
 .TL
 Documento de Requisitos - Sistema de Gestão de Locação de Quartos em hotel
 .AU
-Lucas Cruz dos Reis
+Lucas Cruz dos Reis - RA:754757
 .AU
-Luís Felipe Corrêa Ortolan
+Luís Felipe Corrêa Ortolan - RA:759375
 .AU
-Roseval Donisete Malaquias Junior
+Roseval Donisete Malaquias Junior - RA:758597
 .AU
-Vitor Donadelli Rodrigues
+Vitor Donadelli Rodrigues - RA: 760650
 .AU
-Yuri Gabriel Aragão da Silva
+Yuri Gabriel Aragão da Silva - RA: 758608
+.sp 4
 .AI
-Universidade Federal de São Carlos(UFSCar)
+Universidade Federal de São Carlos
+.sp 28
 .NH
 Introdução
 .NH 2
@@ -28,7 +31,7 @@ O sistema possuirá duas interfaces separadas, sendo uma para os hóspedes e out
 .NH 2
 Visão Geral do Restante do Documento
 .PP
-Na seção 2 é a apresentada uma descrição geral do sistema. Os requisitos funcionais e não funcionais são apresentados na seção 3. Ao final é apresentado um sumário do brainstorm.
+Na seção 2 deste documento é apresentada uma descrição geral do sistema. Os requisitos funcionais e não funcionais serão apresentados na seção 3. Por último, há um sumário do brainstorm.
 .NH
 Descrição Geral
 .NH 2
@@ -61,19 +64,23 @@ Suposições e Dependências
 O sistema depende crucialmente da rede de telecomunicações (Internet) e das operadoras dos cartões de crédito na hora de efetuar os pagamentos online. O sistema depende do bom funcionamento da base de dados do hotel para o funcionamento correto das gestões de serviços e locação de quartos.
 .NH
 Requisitos Específicos
-.NH
+.NH 2
 Requisitos Funcionais
 .nr i 0 1
 .IP \n+i
-O sistema deve solicitar o cadastro completo do gerente/administrador do hotel onde foi feito a instalação do sistema, o cadastro especial deve conter obrigatoriamente CPF, nome completo, número do telefone fixo e celular, senha pessoal.
+O sistema deve permitir realizar o cadastro de administrador novo ou alterar um cadastro já existente do mesmo. 
 .IP \n+i
-O sistema deve permitir funcionários e administrador realizarem o cadastro de hóspedes e outros funcionários. Tal cadastro deve conter, obrigatoriamente, para todas as instâncias, CPF, nome completo, endereço , cidade, estado, CEP, número do telefone fixo e celular e senha pessoal (alfanumérica, no mínimo 12 caracteres).
+O sistema deve solicitar o login de todo tipo de usuário, redirecionando para a página correspondente ao tipo de usuário, seja ele administrador, funcionário do hotel ou hóspede.
 .IP \n+i
-O sistema deve permitir o funcionário ou administrador alterar cadastro já existente de um hóspede, mediante o pedido e login do mesmo e excluir cadastros de hóspedes.
+O sistema deve permitir que o administrador do hotel cadastre novos funcionários no sistema. Além disso, deve permitir que o administrador remova ou altere cadastros pré existentes.
 .IP \n+i
-O sistema deve permitir o hóspede realizar reserva no hotel, mediante login. A reserva pode ser feita tanto no balcão de atendimento do hotel com auxílio de funcionário ou através do aplicativo de celular ou pelo computador.
+O sistema deve permitir que funcionários e administrador realizem o cadastro de hóspedes. Tal cadastro deve conter, obrigatoriamente, CPF, nome completo, endereço, cidade, estado, CEP, número do telefone fixo e celular e senha pessoal (alfanumérica, no mínimo 12 caracteres).
 .IP \n+i
-O sistema deve permitir o hóspede realizar a alteração ou exclusão de uma reserva já existente.
+O sistema deve permitir que os funcionários realizem o check-in do hóspede no hotel. Caso o cliente já tenha se hospedado no hotel é possível usar os dados já cadastrados.
+.IP \n+i
+O sistema deve permitir que os funcionários realizem o check-out do hóspede no hotel. No final, deve ser exibido um resumo da estadia do hóspede, incluindo gastos durante a estadia e números de dias pernoitados.
+.IP \n+i
+O sistema deve permitir o hóspede realizar reserva no hotel, mediante login. A reserva pode ser feita tanto no balcão de atendimento do hotel com auxílio de funcionário ou através do aplicativo de celular ou pelo computador. Também deve ser permitido ao hóspede alterar ou excluir uma reserva já existente.
 .IP \n+i
 O sistema deve permitir o hóspede realizar o pagamento de sua estadia no hotel,  através do aplicativo celular, desktop ou com auxílio do balcão de atendimento do hotel. O pagamento pode ser feito com dinheiro ou cartão de crédito (os permitidos serão MasterCard, Visa e AmericanExpress).
 .IP \n+i
@@ -81,27 +88,91 @@ O sistema deve permitir o hóspede solicitar um reembolso do valor pago pela est
 .IP \n+i
 O sistema deve permitir que o hóspede solicite que seja feito o serviço de quarto, agendado em melhor horário para o hóspede. Além disso, deve ser possível alterar ou cancelar um serviço de quarto pré agendado.
 .IP \n+i
-O sistema deve permitir que o hóspede solicite um extrato que indica todos os consumos realizados até o momento, sejam estes comidas consumidas, serviços adicionais pagos oferecidos pelo hotel.
-.IP \n+i
-O sistema deve permitir que o hóspede realize a compra do serviço de internet oferecido pelo hotel para um determinado período. Também deve ser possível alterar o período da compra, assim como cancelar a compra.
+ O sistema deve permitir que o hóspede realize a compra do serviço de internet oferecido pelo hotel para um determinado período. Também deve ser possível alterar o período da compra, assim como cancelar a compra.
 .IP \n+i
 O sistema deve permitir que o hóspede realize a compra de fichas do cassino do hotel, assim como pedir o reembolso por fichas não usadas.
 .IP \n+i
-O sistema deve permitir que o hóspede faça a requisição de toalhas extras para o seu quarto para que estas possam ser usadas na piscina. 
+O sistema deve permitir aos funcionários que coloquem gastos feitos pelos hóspedes em suas contas, como consumo de frigobar ou gastos no restaurante do hotel.
+.IP \n+i
+O sistema deve permitir que o hóspede solicite um extrato que indica todos os consumos realizados até o momento, sejam estes comidas consumidas, serviços adicionais pagos oferecidos pelo hotel.
+.IP \n+i
+O sistema deve permitir que o hóspede faça a requisição de toalhas extras para o seu quarto para que estas possam ser usadas na piscina.
+.IP \n+i
+O sistema deve permitir aos funcionários cadastrar novos cartões-chave para os quartos. Além disso, deve ser possível alterar qual quarto determinada chave abre ou apagar os dados salvos no cartão de forma que ele não abra nenhum quarto.
 .NH 2
 Requisitos Não-Funcionais
+.IP \n+i
+O sistema deve realizar um Backup de todo o banco de dados do sistema a cada 12 horas
+.IP \n+i
+O sistema deve ter no máximo um tempo de resposta para os usuários de até 3 segundos.
+.IP \n+i
+O sistema deve possuir senhas para funcionários, administrador e hóspedes com diferentes níveis de acesso, os requisitos que necessitam de senha de administrador são 3, 4, para funcionário são 4, 5, 6, 13, 16, para hóspedes 7, 8, 9, 10, 11, 12, 14, 15.
+.IP \n+i
+O sistema deve exibir interface diferente referente ao grau de acesso do usuário, a arte deve ser primariamente de coloração avermelhada para hóspedes e esbranquiçada para administrador e funcionários do hotel.
+.IP \n+i
+O sistema deve fornecer uma interface de usuário intuitiva, para que os funcionários possam aprender com facilidade suas funcionalidade e os clientes possam desfrutar de todos os serviços fornecidos.
+.IP \n+i
+O sistema deve ter um banco de dados desenvolvido em MySql.
+.NH 2
+Requisitos de Sistema
+.IP \n+i
+O sistema deve ser executado em computadores pessoais compatíveis com windows 8, Linux ou MacOS e em celulares android ou iOS, todos com acesso a internet.
 .SH
-Brainstorm
+Desenvolvimento do brainstorm e seus resultados
 .PP
-Nos reunimos na biblioteca às 9:30 até 10:30 dia 10/04/2019, iniciamos a discusão entre os 5 membros, tivemos Lucas como o relator, e Luis como o administrador da reunião, enquanto os demais lançavam toda sorte de ideias a respeito do sistema; abordamos a funcionalidades ligadas à reserva de quartos feitas pelo cliente, 
-seguinte fizemos uma abordagem acerca efetivação de reservas e hospedagens, logo após os requisitos de sistema, discutimos a gestão de hospedagem e 
-serviços adicionais sistema de reserva de quartos de um hotel; entre os quais: criar uma reserva, gerar senha para o sistema, alterar uma 
-reserva, cancelar uma reserva, discutiu-se também efetivar a reserva/pagar e se deve separá-las, decidiu-se que sim; criar cadastro(funcionário, 
-administrador, hóspede), alterar cadastro(funcionário, administrador, hóspede), excluir cadastro(funcionário, administrador, hóspede), realizar um 
-backup a cada 24h, capaz de rodar em Windows 8 SP1 ou superior, Linux, MacOS; realizar pagamento, criar uma interface diferente para hóspede do hotel web 
-em html/css/js, criar uma interface diferente para gestor do hotel web em html/css/js, função de reembolso de parte do pagamento, os pagamentos devem 
-ser efetivados pelo sistema em até 10 sec, interface de aplicativo para OSX e Android, cadastrar o cartão do quarto, descadastrar o cartão do quarto; 
-solicitar serviço de quarto, listagem dos consumos até o momento, solicitar troca de roupa de cama/banho, agendar serviço de quarto, cancelar serviço de 
-quarto; acessar área de serviços adicionais (agendar, alterar, cancelar), solicitar fichas de cassinos, solicitar plano de internet, alterar plano de 
-internet, cancelar plano de internet, renovar o plano de internet, solicitar toalha para a piscina. Ao final chegamos perto de 40 requisitos para serem implementados
-no sistema.
+Nos reunimos na BCo na quarta-feira, dia 10/04, às 9h30. O processo do brainstorm durou pouco mais de uma hora. Os cinco membros deste grupo estavam presentes e para realização do brainstorm o aluno Lucas ficou responsável por transcrever o andamento da reunião, assim como as ideias enquanto o aluno Luís Felipe ficou responsável por coordenar as ideias que eram expostas pelos demais alunos.
+.PP
+O objetivo da reunião era discutir funcionalidades que um sistema, que fosse responsável por gerir um hotel, deveria ter. Como um primeiro passo do brainstorm, foram pensadas ideias relacionadas a funcionalidade de reservas de hospedagens, além da funcionalidade responsável por registrar a entrada e a saída do hotel, ou seja, o check-in e check-out, seguido pelas ideias sobre que requisitos de sistema seriam necessários para implementar tais funcionalidades. 
+.PP
+Além disso, foram pensadas funcionalidades relacionadas à manutenção dessas funcionalidades, já que alterações de reserva, cancelamento das mesmas, cadastramento de chaves para o quarto, efetivação de pagamento da reserva são funções tão importantes e tão necessárias quanto as discutidas previamente.
+.PP
+Em seguida, começou-se a pensar sobre como o sistema deveria gerir seus funcionários e hóspedes. Para isso, funcionalidades como criar um cadastro, seja de funcionários ou de hóspedes, foram pensadas. Para manutenção, funcionalidades que alteram ou excluem esses cadastros também foram pensadas.
+.PP
+Depois de discutir diversas ideias para a implementação das funcionalidades descritas acima, e as melhores relatadas durante este trabalho, se começou a ter ideias sobre que funcionalidades um sistema de gerenciamento de hotel deveria ter para melhor gerir seus serviços adicionais.
+.PP
+O hotel ofereceria alguns serviços extras para o conforto do hóspede. Para que o sistema contemplasse estes serviços, funcionalidades extras foram pensadas. O sistema deveria notificar os funcionários do hotel para oferecerem toalhas extras aos hóspedes, caso estes queiram usar a piscina do hotel, também deveria ser registrado pelo sistema a compra de fichas para uso no cassino do hotel. Além disso, o consumo de serviços deveria ser gerenciado pelo sistema, por isso, funcionários podem registrar gastos nas contas feitas por hóspedes e a qualquer momento os hóspedes deveriam ser capazes de solicitar um extrato para consultar seus consumos até o presente momento durante sua estadia.
+.PP
+Para conforto dos hóspedes, seria oferecido no hotel um sistema de internet pago. Para que isso também fosse gerenciado pelo sistema, este deveria oferecer para os hóspedes funções como comprar uma diária do uso de internet, aumentar o período da compra da internet ou simplesmente cancelar o uso desta.
+.PP
+Por último, pensando em requisitos funcionais, foi pensado na possibilidade de o hóspede solicitar um horário específico de serviço de quarto, para que seja realizado toda a arrumação do quarto. Funções que permitam alterar o horário agendado ou mesmo cancelar a solicitação também são importantes.
+.PP
+Com os requisitos funcionais em mente, pensou-se em requisitos não funcionais e requisitos de sistema que suprissem as ideias criadas. Para isso, foi pensado em um sistema que tivesse interfaces diferentes para cada tipo de usuário do sistema, ou seja, administrador, funcionário ou hóspede. Além disso, para que o acesso fosse simples e possível de qualquer lugar, foi pensado que o sistema deveria poder ser acessado através de aplicativos tanto para Android quanto para iOS e uma página web em HTML para acesso nos computadores com sistemas operacionais Windows 8 SP ou superior, Linux e MacOS.
+.PP
+Para que o servidor funcionasse de maneira adequada, pensou-se em um tempo de espera máximo de resposta de três segundos para ações corriqueiras do sistema e até de dez segundos para registro de pagamentos.
+.PP
+Por fim, para garantia que os dados fossem sempre salvos, foi idealizado que o sistema deveria realizar um backup de doze em doze horas, de forma que os dados ficassem registrados nos computadores até passarem para os servidores do hotel.
+.PP
+Ao findar da reunião, chegou-se a aproximadamente quarenta requisitos, entre funcionais, não funcionais e de sistema, para o sistema de gerenciamento deste hotel, em que os mais relevantes foram colocados no projeto final.
+.ds TOC Índice
+.XS 1
+1. Introdução
+.XA 1
+1.1. Propósito do Documento de Requisitos
+.XA 1
+1.2. Escopo do Produto
+.XA 1
+1.3. Visão Geral do Restante do Documento
+.XA 1
+2. Descrição Geral
+.XA 1
+2.1. Perspectiva do Produto
+.XA 1
+2.2. Funções do Produto
+.XA 1
+2.3. Características do Usuário
+.XA 2
+2.4. Restrições Gerais
+.XA 2
+2.5. Suposições e Dependências
+.XA 2
+3. Requisitos Específicos
+.XA 2
+3.1. Requisitos Funcionais
+.XA 3
+3.2. Requisitos Não-Funcionais
+.XA 3
+3.3. Requisitos de Sistema
+.XA 3
+Desenvolvimento do brainstorm e seus resultados
+.XE
+.TC
